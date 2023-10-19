@@ -32,12 +32,11 @@
     "typescript": "^5.0.4"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint"
+    "app/*.{js,jsx,ts,tsx,md,html}": "eslint"
   },
-"husky": {
+  "husky": {
     "hooks": {
       "pre-commit": "yarn run lint-staged"
     }
   }
 }
-
