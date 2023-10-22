@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 const AboutSectionTwo = () => {
   return (
@@ -10,10 +9,9 @@ const AboutSectionTwo = () => {
               className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
-              <Image
+              <img
                 src="/images/about/about-image-2.svg"
                 alt="about image"
-                fill
               />
             </div>
           </div>

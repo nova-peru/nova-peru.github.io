@@ -2,8 +2,8 @@
 
 Install node modules
 
-`pnpm i`
+`npm i`
 
 Run locally
 
-`pnpm dev`
+`npm run dev`
