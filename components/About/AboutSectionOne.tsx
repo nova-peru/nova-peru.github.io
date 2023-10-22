@@ -54,7 +54,7 @@ const AboutSectionOne = () => {
                 data-wow-delay=".2s"
               >
                 <img
-                  src="/images/about/about-image.svg"
+                  src="images/about/about-image.svg"
                   alt="about-image"
                   className="mx-auto max-w-full lg:mr-0"
                 />
