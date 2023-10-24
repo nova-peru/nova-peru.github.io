@@ -35,7 +35,6 @@
     "typescript": "^5.0.4"
   },
   "lint-staged": {
-    "app/*.{js,jsx,ts,tsx,md,html}": "eslint",
     "app/**/*.{js,jsx,ts,tsx,md,html}": "eslint",
     "components/**/*.{js,jsx,ts,tsx,md,html}": "eslint"
   },
