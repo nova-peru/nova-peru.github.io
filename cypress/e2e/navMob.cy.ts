@@ -5,6 +5,7 @@ describe("dropDown navbar", () => {
     cy.get('[data-cy="navbar-toggler"]').click();
   });
   it("should visit and display about page", () => {
+    cy.contains("Home");
     cy.contains("About");
     cy.get('[data-cy="nav-About"]').click();
     cy.url().should("include", "/about");
