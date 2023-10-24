@@ -1,5 +1,8 @@
-describe("Visit the home page", () => {
-  it("passes", () => {
+describe("Pages", () => {
+  it("visit home", () => {
     cy.visit("/");
+  });
+  it("visit about", () => {
+    cy.visit("/about");
   });
 });
