@@ -2,8 +2,28 @@
 
 Install node modules
 
-`npm i`
+```bash
+npm i
+```
 
 Run locally
 
-`npm run dev`
+```bash
+npm run dev
+```
+
+## Run Test E2E Cypress
+
+`You should run your program locally before run the tests`
+
+Run it in console
+
+```bash
+npm run test:e2e
+```
+
+Run it in GUI mode
+
+```bash
+npm run e2e
+```
