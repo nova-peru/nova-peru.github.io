@@ -1,8 +1,8 @@
 'use client'
 
 import Slider, { Settings } from "react-slick";
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image'
 import { icons } from "./icons";
 
@@ -14,12 +14,13 @@ const Slide = () => {
     const settings:Settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 2000,
         cssEase: "linear",
+        arrows:false,
         responsive: [
             {
                 breakpoint: 600,
@@ -29,11 +30,20 @@ const Slide = () => {
                     infinite:true,
                     dots:false
                 }
+            },
+            {
+                breakpoint: 800,
+                settings : {
+                    slidesToShow: 3,
+                    slidesToScroll:1,
+                    infinite:true,
+                    dots:true,
+                }
             }
         ]
       };
   return (
-      <Slider className="my-5" {...settings}>
+      <Slider className="mx-5" {...settings}>
         {icons.length>0 
         ? icons.map((e,i) => 
         <div key={i}>
