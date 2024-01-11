@@ -2,7 +2,7 @@ import Slide from "./Slider";
 
 const Carousel = () => {
   return (
-    <div className="mt-5" id="Carousel">
+    <div className="py-10" id="Carousel">
       <Slide></Slide>
     </div>
   );
