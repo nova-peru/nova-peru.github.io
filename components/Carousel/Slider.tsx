@@ -12,9 +12,9 @@ interface SlideProps {
 
 const Slide = () => {
     const settings:Settings = {
-        dots: true,
+        dots: false,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: true,
         speed: 2000,
@@ -28,7 +28,6 @@ const Slide = () => {
                     slidesToShow: 2,
                     slidesToScroll:1,
                     infinite:true,
-                    dots:false
                 }
             },
             {
@@ -37,7 +36,6 @@ const Slide = () => {
                     slidesToShow: 3,
                     slidesToScroll:1,
                     infinite:true,
-                    dots:true,
                 }
             }
         ]
@@ -47,7 +45,7 @@ const Slide = () => {
         {icons.length>0 
         ? icons.map((e,i) => 
         <div key={i}>
-            <Image width={100} height={60} src={e} alt="icon"></Image>
+            <Image width={50} height={50} src={e} alt="icon"></Image>
         </div>)
         : null}
       </Slider>
