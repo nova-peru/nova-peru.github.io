@@ -6,10 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image'
 import { icons } from "./icons";
 
-interface SlideProps {
-    elements: JSX.Element[]
-}
-
 const Slide = () => {
     const settings:Settings = {
         dots: false,
