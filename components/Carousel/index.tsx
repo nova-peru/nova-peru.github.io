@@ -1,9 +1,23 @@
-import Slide from "./Slider";
+'use client'
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { settings } from "./settings";
+import { icons } from "./icons";
+import Image from 'next/image'
 
 const Carousel = () => {
   return (
-    <div className="py-10" id="Carousel">
-      <Slide></Slide>
+    <div id="Carousel">
+      <Slider {...settings}>
+        {icons.length > 0
+          ? icons.map((e, i) =>
+            <div key={i}>
+              <Image width={50} height={50} src={e} alt="icon"></Image>
+            </div>)
+          : null}
+      </Slider>
     </div>
   );
 }
