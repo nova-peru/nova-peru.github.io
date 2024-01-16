@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Inter } from "@next/font/google";
 import Carousel from '@/components/Carousel';
+import Box from '@/components/ui/Box'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,9 @@ export default function Home() {
       <Video />
       {/* <Brands /> */}
       <AboutSectionOne />
-      <Carousel />
+      <Box>
+        <Carousel />
+      </Box>
       <AboutSectionTwo />
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
