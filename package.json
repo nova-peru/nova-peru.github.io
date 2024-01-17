@@ -21,6 +21,7 @@
     "react-dom": "18.2.0",
     "react-modal-video": "^2.0.0",
     "react-slick": "^0.29.0",
+    "resend": "^2.1.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
