@@ -23,11 +23,11 @@ export default function Home() {
       <Features />
       <Video />
       {/* <Brands /> */}
-      <AboutSectionOne />
+      {/* <AboutSectionOne /> */}
       <Box>
         <Carousel />
       </Box>
-      <AboutSectionTwo />
+      {/* <AboutSectionTwo /> */}
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
       <Blog />
