@@ -19,11 +19,14 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-modal-video": "^2.0.0"
+    "react-modal-video": "^2.0.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.34",
+    "@types/react-slick": "^0.23.13",
     "autoprefixer": "^10.4.13",
     "cypress": "^13.3.2",
     "husky": "^8.0.3",
