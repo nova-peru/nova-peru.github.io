@@ -28,6 +28,7 @@ const Contact = () => {
                         Your Name
                       </label>
                       <input
+                        name="name"
                         type="text"
                         placeholder="Enter your name"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
@@ -43,6 +44,7 @@ const Contact = () => {
                         Your Email
                       </label>
                       <input
+                        name="email"
                         type="email"
                         placeholder="Enter your email"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
