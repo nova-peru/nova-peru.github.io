@@ -1,4 +1,5 @@
 export const dynamic = "force-static";
+import { checkoutFormSchema } from '@/schemas/form.schema';
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
@@ -9,6 +10,12 @@ const toEmail = process.env.TO_EMAIL
 
 export async function POST(req: Request) {
   const { email, message, name } = await req.json();
+  const parsedForm = checkoutFormSchema.safeParse({ email, message, name })
+  if (parsedForm.success === false) {
+    return NextResponse.json(parsedForm.error, {
+      status: 422
+    })
+  }
   const subject = `${name} want contact you`
   try {
     const { data } = await resend.emails.send({
