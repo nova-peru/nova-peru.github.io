@@ -1,20 +1,31 @@
 'use client'
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
-import { Form } from './types/form.type';
-import { handleSubmit } from "./handleSubmit";
+import { ContactForm } from './types';
+
 
 
 const Contact = () => {
-  const [form, setForm] = useState<Form>({ email: '', message: '', name: '' })
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setForm({
-      ...form,
-      [name]: value
-    })
-  }
+
+  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const formData = new FormData(e.currentTarget)
+    const formValues: ContactForm = {
+      email: formData.get('email').toString(),
+      name: formData.get('name').toString(),
+      message: formData.get('message').toString()
+    }
+    console.log(formValues)
+  }, [])
+  // const [form, setForm] = useState<Form>({ email: '', message: '', name: '' })
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = e.target;
+  //   setForm({
+  //     ...form,
+  //     [name]: value
+  //   })
+  // }
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -44,8 +55,6 @@ const Contact = () => {
                       <input
                         name="name"
                         type="text"
-                        value={form.name}
-                        onChange={handleChange}
                         placeholder="Enter your name"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       />
@@ -62,8 +71,6 @@ const Contact = () => {
                       <input
                         name="email"
                         type="email"
-                        value={form.email}
-                        onChange={handleChange}
                         placeholder="Enter your email"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       />
@@ -79,8 +86,6 @@ const Contact = () => {
                       </label>
                       <textarea
                         name="message"
-                        value={form.message}
-                        onChange={handleChange}
                         rows={5}
                         placeholder="Enter your Message"
                         className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
