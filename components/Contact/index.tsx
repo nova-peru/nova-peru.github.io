@@ -118,7 +118,7 @@ const Contact = () => {
                     {status === "success"
                       ? "Email sent it"
                       : status === "error"
-                        ? "Error sending  email"
+                        ? "Error sending email"
                         : null}
                   </div>
                 </div>
