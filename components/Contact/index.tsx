@@ -36,14 +36,6 @@ const Contact = () => {
       console.error('Error -->', error)
     }
   }, [])
-  // const [form, setForm] = useState<Form>({ email: '', message: '', name: '' })
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  //   const { name, value } = e.target;
-  //   setForm({
-  //     ...form,
-  //     [name]: value
-  //   })
-  // }
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
