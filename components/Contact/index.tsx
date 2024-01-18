@@ -16,7 +16,25 @@ const Contact = () => {
       name: formData.get('name').toString(),
       message: formData.get('message').toString()
     }
-    console.log(formValues)
+    const JSONdata = JSON.stringify(formValues)
+    const endpoint = "/api/send"
+    const fetchOptions: RequestInit = {
+      method: "POST",
+      headers: {
+        "Content-Type": "aplication/json"
+      },
+      body: JSONdata
+    }
+    try {
+      const succesCode = 200
+      const response = await fetch(endpoint, fetchOptions)
+      if (response.status === succesCode) {
+        console.log('Envio exitoso')
+      }
+    }
+    catch (error) {
+      console.error('Error -->', error)
+    }
   }, [])
   // const [form, setForm] = useState<Form>({ email: '', message: '', name: '' })
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
