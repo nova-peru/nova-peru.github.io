@@ -3,6 +3,7 @@
 import { useCallback, useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
 import { ContactForm } from './types';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Contact = () => {
@@ -11,6 +12,7 @@ const Contact = () => {
 
   const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    toast("prueba")
     setStatus("loading")
     const formData = new FormData(e.currentTarget)
     const formValues: ContactForm = {
@@ -109,17 +111,12 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button disabled={status === "loading" ? true : false} className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                    <button disabled={status === "loading" ? true : false} className="w-60 rounded-md bg-primary py-4 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
                       {status === "loading"
-                        ? "Loading"
-                        : "Submit Ticket"
+                        ? "Enviando"
+                        : "Enviar"
                       }
                     </button>
-                    {status === "success"
-                      ? "Email sent it"
-                      : status === "error"
-                        ? "Error sending email"
-                        : null}
                   </div>
                 </div>
               </form>
