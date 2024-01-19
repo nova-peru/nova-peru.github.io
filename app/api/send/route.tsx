@@ -10,13 +10,14 @@ const toEmail = process.env.TO_EMAIL
 
 export async function POST(req: Request) {
   const { email, message, name } = await req.json();
+  const companyName = "Nova"
   const parsedForm = checkoutFormSchema.safeParse({ email, message, name })
   if (parsedForm.success === false) {
     return NextResponse.json(parsedForm.error, {
       status: 422
     })
   }
-  const subject = `${name} want contact you`
+  const subject = `${name} ${message.slice(0, 10)}`
   try {
     const { data } = await resend.emails.send({
       from: fromEmail,
@@ -25,7 +26,7 @@ export async function POST(req: Request) {
       react: (
         <>
           <h1>{`My name is ${name}`}</h1>
-          <p>Thank you for contacting me!</p>
+          <p>Thank you for contacting us : {companyName}</p>
           <p>Message submitted:</p>
           <p>{message}</p>
         </>
