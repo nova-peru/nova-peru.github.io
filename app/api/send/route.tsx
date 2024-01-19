@@ -17,7 +17,7 @@ export async function POST(req: Request) {
       status: 422
     })
   }
-  const subject = `${name} ${message.slice(0, 10)}`
+  const subject = `${name} : ${message.slice(0, 10)}`
   try {
     const { data } = await resend.emails.send({
       from: fromEmail,
@@ -25,9 +25,9 @@ export async function POST(req: Request) {
       subject: subject,
       react: (
         <>
-          <h1>{`My name is ${name}`}</h1>
-          <p>Thank you for contacting us : {companyName}</p>
-          <p>Message submitted:</p>
+          <h1>{subject}</h1>
+          <p>Gracias por contactarnos : {companyName}</p>
+          <p>Mensaje enviado :</p>
           <p>{message}</p>
         </>
       ),
