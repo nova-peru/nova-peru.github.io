@@ -3,7 +3,7 @@
 import { useCallback, useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
 import { ContactForm } from './types';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const Contact = () => {
@@ -12,7 +12,6 @@ const Contact = () => {
 
   const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    toast("prueba")
     setStatus("loading")
     const formData = new FormData(e.currentTarget)
     const formValues: ContactForm = {
@@ -21,7 +20,7 @@ const Contact = () => {
       message: formData.get('message').toString()
     }
     const JSONdata = JSON.stringify(formValues)
-    const endpoint = "/api/send"
+    const endpoint = "/api/sendfas"
     const fetchOptions: RequestInit = {
       method: "POST",
       headers: {
@@ -29,16 +28,22 @@ const Contact = () => {
       },
       body: JSONdata
     }
+    const successMsg = "Mensaje enviado ✔"
+    const errorMsg = "Error al enviar mensaje ❌"
     try {
       const succesCode = 200
       const response = await fetch(endpoint, fetchOptions)
       if (response.status === succesCode) {
         setStatus("success")
+        toast.success(successMsg)
         return
       }
+      setStatus("error")
+      toast.error(errorMsg)
     }
     catch (error) {
       setStatus("error")
+      toast.error(errorMsg)
     }
   }, [])
   return (
