@@ -20,7 +20,7 @@ const Contact = () => {
       message: formData.get('message').toString()
     }
     const JSONdata = JSON.stringify(formValues)
-    const endpoint = "/api/sendfas"
+    const endpoint = "/api/send"
     const fetchOptions: RequestInit = {
       method: "POST",
       headers: {
