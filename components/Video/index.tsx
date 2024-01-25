@@ -11,9 +11,12 @@ const Video = () => {
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
+        {/* <div>Chatbot:</div> */}
         <SectionTitle
-          title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Chatbot:"
+          subtitle="Descubre el potencial de la IA en tu negocio"
+          paragraph="Conectamos tu empresa con la IA para gestionar tus conexiones entre tus agentes y
+          tus clientes en tiempo real."
           center
           mb="80px"
         />
