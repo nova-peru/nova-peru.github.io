@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { settings } from "./settings";
 import { icons } from "./icons";
 import Image from 'next/image'
+import React from "react";
 
 const Carousel = () => {
   return (
@@ -22,4 +23,4 @@ const Carousel = () => {
   );
 }
 
-export default Carousel
+export default React.memo(Carousel)
