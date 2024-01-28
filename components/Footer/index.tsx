@@ -92,10 +92,11 @@ const Footer = () => {
               </div>
             </div>
 
+            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12"></div>
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
+                  Enlaces
                 </h2>
                 <ul>
                   <li>
@@ -107,7 +108,7 @@ const Footer = () => {
                       Blog{" "}
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
@@ -115,14 +116,14 @@ const Footer = () => {
                       {" "}
                       Pricing{" "}
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a
-                      href="/"
+                      href="/nosotros"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      About{" "}
+                      Nosotros{" "}
                     </a>
                   </li>
                 </ul>
@@ -166,7 +167,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
+            {/* <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   Support & Help
@@ -201,16 +202,16 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="bg-primary/10 py-8">
+        {/* <div className="bg-primary/10 py-8">
           <div className="container">
             <p className="text-center text-base text-body-color dark:text-white">
               Template by UIdeck and <a href="https://nextjstemplates.com" rel="nofollow noopener">Next.js Templates</a>
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="absolute right-0 top-14 z-[-1]">
           <svg
             width="55"
