@@ -4,6 +4,7 @@ import { useCallback, useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
 import { ContactForm } from './types';
 import { toast } from 'react-toastify';
+import HttpStatusCode from "@/common/http/statusCode";
 
 
 type FormStatus = "loading" | "success" | "error" | "idle"
@@ -32,9 +33,8 @@ const Contact = () => {
     }
     const errorMsg = "Error al enviar mensaje ❌"
     try {
-      const succesCode = 200
       const response = await fetch(endpoint, fetchOptions)
-      if (response.status === succesCode) {
+      if (response.status === HttpStatusCode.OK) {
         setStatus("success")
         toast.success("Mensaje enviado ✔")
         return
