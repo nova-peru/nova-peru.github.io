@@ -6,9 +6,11 @@ import { ContactForm } from './types';
 import { toast } from 'react-toastify';
 
 
+type FormStatus = "loading" | "success" | "error" | "idle"
+
 const Contact = () => {
 
-  const [status, setStatus] = useState<"loading" | "success" | "error" | "idle">("idle")
+  const [status, setStatus] = useState<FormStatus>("idle")
 
   const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
