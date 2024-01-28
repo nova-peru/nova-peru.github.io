@@ -28,14 +28,13 @@ const Contact = () => {
       },
       body: JSONdata
     }
-    const successMsg = "Mensaje enviado ✔"
     const errorMsg = "Error al enviar mensaje ❌"
     try {
       const succesCode = 200
       const response = await fetch(endpoint, fetchOptions)
       if (response.status === succesCode) {
         setStatus("success")
-        toast.success(successMsg)
+        toast.success("Mensaje enviado ✔")
         return
       }
       setStatus("error")
