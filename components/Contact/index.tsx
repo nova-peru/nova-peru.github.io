@@ -1,6 +1,52 @@
+'use client'
+
+import { useCallback, useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
+import { ContactForm } from './types';
+import { toast } from 'react-toastify';
+import HttpStatusCode from "@/common/http/statusCode";
+
+
+type FormStatus = "loading" | "success" | "error" | "idle"
 
 const Contact = () => {
+
+  const [status, setStatus] = useState<FormStatus>("idle")
+
+  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setStatus("loading")
+    const formData = new FormData(e.currentTarget)
+    const formValues: ContactForm = {
+      email: formData.get('email').toString(),
+      name: formData.get('name').toString(),
+      message: formData.get('message').toString()
+    }
+    const JSONdata = JSON.stringify(formValues)
+    const endpoint = "/api/send"
+    const fetchOptions: RequestInit = {
+      method: "POST",
+      headers: {
+        "Content-Type": "aplication/json"
+      },
+      body: JSONdata
+    }
+    const errorMsg = "Error al enviar mensaje ❌"
+    try {
+      const response = await fetch(endpoint, fetchOptions)
+      if (response.status === HttpStatusCode.OK) {
+        setStatus("success")
+        toast.success("Mensaje enviado ✔")
+        return
+      }
+      setStatus("error")
+      toast.error(errorMsg)
+    }
+    catch (error) {
+      setStatus("error")
+      toast.error(errorMsg)
+    }
+  }, [])
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -17,7 +63,7 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Our support team will get back to you ASAP via email.
               </p>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -28,7 +74,9 @@ const Contact = () => {
                         Your Name
                       </label>
                       <input
+                        name="name"
                         type="text"
+                        required
                         placeholder="Enter your name"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       />
@@ -43,7 +91,9 @@ const Contact = () => {
                         Your Email
                       </label>
                       <input
+                        name="email"
                         type="email"
+                        required
                         placeholder="Enter your email"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       />
@@ -60,14 +110,18 @@ const Contact = () => {
                       <textarea
                         name="message"
                         rows={5}
+                        required
                         placeholder="Enter your Message"
                         className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       ></textarea>
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                      Submit Ticket
+                    <button disabled={status === "loading"} className="w-60 rounded-md bg-primary py-4 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                      {status === "loading"
+                        ? "Enviando"
+                        : "Enviar"
+                      }
                     </button>
                   </div>
                 </div>

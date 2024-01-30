@@ -21,7 +21,10 @@
     "react-dom": "18.2.0",
     "react-modal-video": "^2.0.0",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "react-toastify": "^10.0.3",
+    "resend": "^2.1.0",
+    "slick-carousel": "^1.8.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
