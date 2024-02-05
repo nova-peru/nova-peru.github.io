@@ -49,7 +49,7 @@ const Contact = () => {
   }, [])
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
-      <div className="container">
+      <div className="container" id="formulario">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-12/12 xl:w-12/12">
             <div
