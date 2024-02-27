@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="58mm" height="43mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 5800 4300"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="604" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Tw Cen MT">
+		<font-face-src>
+			<font-face-name name="Tw Cen MT"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="A" horiz-adv-x="604" d="M297.499 646l293.5 -646 -88.4985 0 -72.1684 159.001 -264.166 0 -71.8321 -159.001 -88.3335 0 291.498 646zm0.333205 -195.333l-99.6655 -220.666 199.832 0 -100.167 220.666z"/>
+   <glyph unicode="i" horiz-adv-x="219" d="M40.9997 534.999c0,17.6692 6.49905,32.8347 19.5003,45.6677 13.1663,12.833 28.4999,19.3321 46.4992,19.3321 17.6661,0 32.8347,-6.49905 45.6677,-19.3321 12.833,-12.833 19.3321,-27.9985 19.3321,-45.6677 0,-17.8311 -6.49905,-33.1648 -19.3321,-45.9978 -12.833,-12.668 -28.0016,-19.002 -45.6677,-19.002 -17.9993,0 -33.3329,6.334 -46.4992,19.002 -13.0012,12.833 -19.5003,28.1667 -19.5003,45.9978zm24.0001 -131.999l85.0014 0 0 -403 -85.0014 0 0 403z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Tw Cen MT";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .fil0 {fill:#274073}
+    .fil2 {fill:#8091F2}
+    .fil1 {fill:#F2F2F2}
+    .fnt0 {font-weight:normal;font-size:3211.24px;font-family:'Tw Cen MT'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="46.93" y="15.77" width="5697.99" height="4269.5" rx="639.26" ry="732.16"/>
+  <text x="1640.33" y="3187.76"  class="fil1 fnt0">A</text>
+  <text x="3579.92" y="3187.76"  class="fil2 fnt0">i</text>
+ </g>
+</svg>

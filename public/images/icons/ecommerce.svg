@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="58mm" height="43mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 5800 4300"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#F2F2F2;stroke-width:235.77;stroke-miterlimit:22.9256}
+    .fil0 {fill:#274073}
+    .fil3 {fill:#4B61A6}
+    .fil2 {fill:#8091F2}
+    .fil1 {fill:#F2F2F2}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2098702980608">
+   <rect class="fil0" x="46.92" y="15.77" width="5697.99" height="4269.5" rx="639.26" ry="732.16"/>
+   <rect class="fil1 str0" transform="matrix(1.15748 -0.421287 0.421287 1.15748 906.276 1555.96)" width="1905" height="1146.53" rx="134" ry="134"/>
+   <rect class="fil2" x="2208" y="1875.39" width="2546.22" height="1582.72" rx="285.66" ry="271.42"/>
+   <circle class="fil1" cx="4102.12" cy="3131.68" r="140.01"/>
+   <circle class="fil1" cx="4340.24" cy="3131.68" r="140.01"/>
+   <rect class="fil3" x="2208" y="2210.02" width="2546.22" height="456.73"/>
+  </g>
+ </g>
+</svg>
