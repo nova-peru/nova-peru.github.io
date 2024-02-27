@@ -25,7 +25,7 @@ const AboutSectionOne = () => {
               <SectionTitle
                 title="¡Bienvenido a Novaworks Perú!"
                 subtitle="Transformando Ideas en Experiencias Digitales Inolvidables"
-                paragraph="En Novawork Perú, nos apasiona llevar la innovación a nuevas alturas, y lo hacemos a través
+                paragraph="En Novaworks Perú, nos apasiona llevar la innovación a nuevas alturas, y lo hacemos a través
                 de la creación de chatbots y soluciones tecnológicas de vanguardia. Somos tu socio estratégico
                 para llevar tu visión digital al siguiente nivel."
                 mb="44px"
