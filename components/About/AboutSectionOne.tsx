@@ -23,9 +23,9 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="¡Bienvenido a Nova Corp Perú!"
+                title="¡Bienvenido a Novaworks Perú!"
                 subtitle="Transformando Ideas en Experiencias Digitales Inolvidables"
-                paragraph="En Nova Corp Perú, nos apasiona llevar la innovación a nuevas alturas, y lo hacemos a través
+                paragraph="En Novawork Perú, nos apasiona llevar la innovación a nuevas alturas, y lo hacemos a través
                 de la creación de chatbots y soluciones tecnológicas de vanguardia. Somos tu socio estratégico
                 para llevar tu visión digital al siguiente nivel."
                 mb="44px"
