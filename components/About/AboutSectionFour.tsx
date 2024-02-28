@@ -24,10 +24,10 @@ const AboutSectionFour = () => {
             <div className="w-full px-4 lg:w-12/12 xl:w-12/12">
               <SectionTitle
                 title="Únete a Nosotros en el Viaje Digital"
-                paragraph="Descubre cómo Nova Corp Perú puede impulsar tu presencia en línea y optimizar tus
+                paragraph="Descubre cómo Novaworks Perú puede impulsar tu presencia en línea y optimizar tus
                 operaciones digitales. Contáctanos hoy mismo para una consulta personalizada y llevemos tu
                 visión a la realidad.
-                ¡Transforma tu Mundo Digital con Nova Corp Perú!"
+                ¡Transforma tu Mundo Digital con Novaworks Perú!"
                 center={true}
                 width="1000px"
                 mb="44px"
