@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 
 const AboutSectionTwo = () => {
@@ -10,9 +11,10 @@ const AboutSectionTwo = () => {
               className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] text-center lg:m-0"
               data-wow-delay=".15s"
             >
-              <img data-cy="about-image-2"
+              <Image data-cy="about-image-2"
                 src="images/about/works.svg"
                 alt="about image"
+                fill
               />
             </div>
           </div>

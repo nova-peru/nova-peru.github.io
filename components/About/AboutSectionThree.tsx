@@ -1,4 +1,6 @@
+import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -53,10 +55,11 @@ excelencia." />
                 className="wow fadeInUp relative mx-auto aspect-[25/24] lg:mr-0"
                 data-wow-delay=".2s"
               >
-                <img data-cy="about-image"
+                <Image data-cy="about-image"
                   src="images/about/exito_2.svg"
                   alt="about-image"
                   className="mx-auto max-w-full lg:mr-0"
+                  fill
                 />
               </div>
             </div>
