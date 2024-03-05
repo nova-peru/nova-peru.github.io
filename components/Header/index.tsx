@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image"
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+
 
 const Header = () => {
   // Navbar toggle
@@ -50,14 +52,14 @@ const Header = () => {
                 className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"
                   } `}
               >
-                <img
+                <Image
                   src="images/logo/logo-nova-2.svg"
                   alt="logo"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
                 />
-                <img
+                <Image
                   src="images/logo/logo-nova.svg"
                   alt="logo"
                   width={140}
