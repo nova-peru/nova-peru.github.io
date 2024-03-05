@@ -7,11 +7,11 @@ const AboutSectionTwo = () => {
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
             <div
-              className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
+              className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] text-center lg:m-0"
               data-wow-delay=".15s"
             >
               <img data-cy="about-image-2"
-                src="images/about/about-image-2.svg"
+                src="images/about/works.svg"
                 alt="about image"
               />
             </div>

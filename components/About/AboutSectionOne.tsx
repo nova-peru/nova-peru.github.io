@@ -53,11 +53,11 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div
-                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
+                className="wow fadeInUp relative mx-auto aspect-[25/24] lg:mr-0"
                 data-wow-delay=".2s"
               >
                 <img data-cy="about-image"
-                  src="images/about/about-image.svg"
+                  src="images/about/collaboration_3.svg"
                   alt="about-image"
                   className="mx-auto max-w-full lg:mr-0"
                 />
