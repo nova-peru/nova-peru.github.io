@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image"
 
+
 const Footer = () => {
   return (
     <>
@@ -13,14 +14,14 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[240px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
-                  <img
+                  <Image
                     src="images/logo/logo-nova-2.svg"
                     alt="logo"
                     className="w-full dark:hidden"
                     width={140}
                     height={30}
                   />
-                  <img
+                  <Image
                     src="images/logo/logo-nova.svg"
                     alt="logo"
                     className="hidden w-full dark:block"
@@ -159,7 +160,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      novacorp@gmail.com{" "}
+                      contacto@novaworks.dev{" "}
                     </a>
                   </li>
                   {/* <li>
