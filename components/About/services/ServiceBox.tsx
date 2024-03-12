@@ -21,9 +21,10 @@ const ServiceBox = () => {
         <Image 
                   src={service.imageUrl}
                   alt={service.title}
-                  className="mx-auto max-w-full lg:mr-0"
-                  fill
-                  about='author FreePik'
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-full h-auto"
                 />
                 </div>
       </div>
