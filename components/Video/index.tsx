@@ -11,9 +11,12 @@ const Video = () => {
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
+        {/* <div>Chatbot:</div> */}
         <SectionTitle
-          title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Chatbot:"
+          subtitle="Descubre el potencial de la IA en tu negocio"
+          paragraph="Conectamos tu empresa con la IA para gestionar tus conexiones entre tus agentes y
+          tus clientes en tiempo real."
           center
           mb="80px"
         />
@@ -28,8 +31,10 @@ const Video = () => {
                 <img data-cy="video-image" src="images/video/video.jpg" alt="video image" />
                 <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
                   <button
+                    disabled
                     onClick={() => setOpen(true)}
-                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
+                    className="hidden"
+                  // className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
                   >
                     <svg
                       width="16"

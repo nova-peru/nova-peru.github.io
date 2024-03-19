@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image"
+
 
 const Footer = () => {
   return (
@@ -10,28 +12,35 @@ const Footer = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-              <div className="mb-12 max-w-[360px] lg:mb-16">
+              <div className="mb-12 max-w-[240px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
-                  <img
-                    src="images/logo/logo-2.svg"
+                  <Image
+                    src="images/logo/logo-nova-2.svg"
                     alt="logo"
                     className="w-full dark:hidden"
                     width={140}
                     height={30}
                   />
-                  <img
-                    src="images/logo/logo.svg"
+                  <Image
+                    src="images/logo/logo-nova.svg"
                     alt="logo"
                     className="hidden w-full dark:block"
                     width={140}
                     height={30}
                   />
                 </Link>
-                <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
-                </p>
-                <div className="flex items-center">
+                <span>
+                  <p className="mb-3 text-base font-medium leading-relaxed text-body-color">
+                    Jr. Junín Nro. 348
+                  </p>
+                  <p className="mb-3 text-base font-medium leading-relaxed text-body-color">
+                    Trujillo
+                  </p>
+                  <p className="mb-7 text-base font-medium leading-relaxed text-body-color">
+                    Perú
+                  </p>
+                </span>
+                {/* <div className="flex items-center">
                   <a
                     href="/"
                     aria-label="social-link"
@@ -88,14 +97,15 @@ const Footer = () => {
                       <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
                     </svg>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
 
+            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12"></div>
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
+                  Enlaces
                 </h2>
                 <ul>
                   <li>
@@ -104,10 +114,10 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Blog{" "}
+                      Inicio{" "}
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
@@ -115,14 +125,14 @@ const Footer = () => {
                       {" "}
                       Pricing{" "}
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a
-                      href="/"
+                      href="/nosotros"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      About{" "}
+                      Nosotros{" "}
                     </a>
                   </li>
                 </ul>
@@ -132,7 +142,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Terms
+                  Contáctanos
                 </h2>
                 <ul>
                   <li>
@@ -141,7 +151,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      TOS{" "}
+                      +51 918801827{" "}
                     </a>
                   </li>
                   <li>
@@ -150,10 +160,10 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Privacy Policy{" "}
+                      contacto@novaworks.dev{" "}
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
@@ -161,12 +171,12 @@ const Footer = () => {
                       {" "}
                       Refund Policy{" "}
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
+            {/* <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   Support & Help
@@ -201,16 +211,16 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="bg-primary/10 py-8">
+        {/* <div className="bg-primary/10 py-8">
           <div className="container">
             <p className="text-center text-base text-body-color dark:text-white">
               Template by UIdeck and <a href="https://nextjstemplates.com" rel="nofollow noopener">Next.js Templates</a>
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="absolute right-0 top-14 z-[-1]">
           <svg
             width="55"

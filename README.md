@@ -1,4 +1,4 @@
-# Nova Corp Website
+# Novaworks Website
 
 Install node modules
 

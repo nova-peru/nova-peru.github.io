@@ -8,7 +8,7 @@ const checkIcon = (
   </svg>
 );
 
-const AboutSectionOne = () => {
+const AboutSectionThree = () => {
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -25,11 +25,7 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="¡Bienvenido a Novaworks Perú!"
-                subtitle="Transformando Ideas en Experiencias Digitales Inolvidables"
-                paragraph="En Novaworks Perú, nos apasiona llevar la innovación a nuevas alturas, y lo hacemos a través
-                de la creación de chatbots y soluciones tecnológicas de vanguardia. Somos tu socio estratégico
-                para llevar tu visión digital al siguiente nivel."
+                title="¿Por qué Elegirnos?"
                 mb="44px"
               />
 
@@ -38,16 +34,17 @@ const AboutSectionOne = () => {
                 data-wow-delay=".15s"
               >
                 <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Calidad Premium" />
-                    <List text="Frameworks optimizados para SEO" />
-                    <List text="Frameworks CSS para aumentar la eficiencia" />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    {/* <List text="Next.js" /> */}
-                    <List text="Documentación" />
-                    <List text="Código limpio, reutilizable y altamente testeable" />
+                  <div className="w-full px-3">
+                    <List text="Experiencia Probada: Con años de experiencia en el desarrollo de soluciones
+tecnológicas, hemos transformado ideas en realidades digitales exitosas." />
+                    <List text="Enfoque Personalizado: Cada proyecto es único. Nos tomamos el tiempo para entender
+tus objetivos y adaptamos nuestras soluciones a tus necesidades." />
+                    <List text="Innovación Constante: Estamos a la vanguardia de las últimas tecnologías.
+Implementamos prácticas innovadoras para mantenerte un paso adelante en el mundo
+digital." />
+                    <List text="Compromiso con la Excelencia: La calidad es nuestra prioridad. Nos esforzamos por
+ofrecer resultados que superen tus expectativas y establezcan estándares de
+excelencia." />
                   </div>
                 </div>
               </div>
@@ -59,7 +56,7 @@ const AboutSectionOne = () => {
                 data-wow-delay=".2s"
               >
                 <Image data-cy="about-image"
-                  src="images/about/collaboration_3.svg"
+                  src="images/about/exito_2.svg"
                   alt="about-image"
                   className="mx-auto max-w-full lg:mr-0"
                   fill
@@ -73,4 +70,4 @@ const AboutSectionOne = () => {
   );
 };
 
-export default AboutSectionOne;
+export default AboutSectionThree;

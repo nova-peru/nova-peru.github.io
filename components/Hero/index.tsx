@@ -20,6 +20,9 @@ const Hero = () => {
                 <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                   Descubre los Servicios Esenciales para dar Vida a tu Visión Empresarial
                 </p>
+                
+                <Link className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp" href="#contact"><span>Contáctanos</span></Link>
+                
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   {/* <Link
                     href="https://nextjstemplates.com/templates/saas-starter-startup"

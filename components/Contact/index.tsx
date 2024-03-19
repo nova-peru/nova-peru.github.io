@@ -48,8 +48,8 @@ const Contact = () => {
     }
   }, [])
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
-      <div className="container">
+    <section id="contact" className="overflow-hidden py-8 md:py-10 lg:py-14">
+      <div className="container" id="formulario">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-12/12 xl:w-12/12">
             <div
@@ -58,10 +58,10 @@ const Contact = () => {
               "
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Need Help? Open a Ticket
+                ¿Tienes una consulta? Contáctanos
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                Our support team will get back to you ASAP via email.
+                Déjanos tus datos y nosotros resolveremos tu consulta.
               </p>
               <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
@@ -71,13 +71,13 @@ const Contact = () => {
                         htmlFor="name"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Your Name
+                        Nombre
                       </label>
                       <input
                         name="name"
                         type="text"
                         required
-                        placeholder="Enter your name"
+                        placeholder="Ingresa tu nombre"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       />
                     </div>
@@ -88,13 +88,13 @@ const Contact = () => {
                         htmlFor="email"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Your Email
+                        Email
                       </label>
                       <input
                         name="email"
                         type="email"
                         required
-                        placeholder="Enter your email"
+                        placeholder="Ingresa tu email"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       />
                     </div>
@@ -105,13 +105,13 @@ const Contact = () => {
                         htmlFor="message"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Your Message
+                        Mensaje
                       </label>
                       <textarea
                         name="message"
                         rows={5}
                         required
-                        placeholder="Enter your Message"
+                        placeholder="Ingresa tu mensaje"
                         className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       ></textarea>
                     </div>
