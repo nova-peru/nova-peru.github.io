@@ -1,60 +1,57 @@
-'use client'
+'use client';
 
-import { useCallback, useState } from "react";
-import NewsLatterBox from "./NewsLatterBox";
+import { useCallback, useState } from 'react';
+import NewsLatterBox from './NewsLatterBox';
 import { ContactForm } from './types';
 import { toast } from 'react-toastify';
-import HttpStatusCode from "@/common/http/statusCode";
+import HttpStatusCode from '@/common/http/statusCode';
 
-
-type FormStatus = "loading" | "success" | "error" | "idle"
+type FormStatus = 'loading' | 'success' | 'error' | 'idle';
 
 const Contact = () => {
+  const [status, setStatus] = useState<FormStatus>('idle');
 
-  const [status, setStatus] = useState<FormStatus>("idle")
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setStatus('loading');
+      const formData = new FormData(e.currentTarget);
+      const formValues: ContactForm = {
+        email: formData.get('email').toString(),
+        name: formData.get('name').toString(),
+        message: formData.get('message').toString(),
+      };
+      const JSONdata = JSON.stringify(formValues);
+      const endpoint = process.env.NEXT_PUBLIC_RESEND;
 
-  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setStatus("loading")
-    const formData = new FormData(e.currentTarget)
-    const formValues: ContactForm = {
-      email: formData.get('email').toString(),
-      name: formData.get('name').toString(),
-      message: formData.get('message').toString()
-    }
-    const JSONdata = JSON.stringify(formValues)
-    const endpoint = process.env.NEXT_PUBLIC_RESEND
-    const fetchOptions: RequestInit = {
-      method: "POST",
-      headers: {
-        "Content-Type": "aplication/json",
-        "Access-Control-Allow-Origin" : "*",
-      },
-      body: JSONdata
-    }
-    const errorMsg = "Error al enviar mensaje ❌"
-    try {
-      const response = await fetch(endpoint, fetchOptions)
-      if (response.status === HttpStatusCode.OK) {
-        setStatus("success")
-        toast.success("Mensaje enviado ✔")
-        return
+      const errorMsg = 'Error al enviar mensaje ❌';
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: JSONdata,
+        });
+        if (response.status === HttpStatusCode.OK) {
+          setStatus('success');
+          toast.success('Mensaje enviado ✔');
+          return;
+        }
+        setStatus('error');
+        toast.error(errorMsg);
+      } catch (error) {
+        setStatus('error');
+        toast.error(errorMsg);
       }
-      setStatus("error")
-      toast.error(errorMsg)
-    }
-    catch (error) {
-      setStatus("error")
-      toast.error(errorMsg)
-    }
-  }, [])
+    },
+    [],
+  );
   return (
     <section id="contact" className="overflow-hidden py-8 md:py-10 lg:py-14">
       <div className="container" id="formulario">
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-12/12 xl:w-12/12">
+          <div className="lg:w-12/12 xl:w-12/12 w-full px-4">
             <div
-              className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] py-11 px-8 dark:bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+              className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] px-8 py-11 dark:bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s
               "
             >
@@ -79,7 +76,7 @@ const Contact = () => {
                         type="text"
                         required
                         placeholder="Ingresa tu nombre"
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        className="w-full rounded-md border border-transparent px-6 py-3 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       />
                     </div>
                   </div>
@@ -96,7 +93,7 @@ const Contact = () => {
                         type="email"
                         required
                         placeholder="Ingresa tu email"
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        className="w-full rounded-md border border-transparent px-6 py-3 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       />
                     </div>
                   </div>
@@ -113,16 +110,16 @@ const Contact = () => {
                         rows={5}
                         required
                         placeholder="Ingresa tu mensaje"
-                        className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        className="w-full resize-none rounded-md border border-transparent px-6 py-3 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       ></textarea>
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button disabled={status === "loading"} className="w-60 rounded-md bg-primary py-4 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                      {status === "loading"
-                        ? "Enviando"
-                        : "Enviar"
-                      }
+                    <button
+                      disabled={status === 'loading'}
+                      className="w-60 rounded-md bg-primary py-4 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
+                    >
+                      {status === 'loading' ? 'Enviando' : 'Enviar'}
                     </button>
                   </div>
                 </div>
