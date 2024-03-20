@@ -23,11 +23,12 @@ const Contact = () => {
       message: formData.get('message').toString()
     }
     const JSONdata = JSON.stringify(formValues)
-    const endpoint = "/api/send"
+    const endpoint = process.env.NEXT_PUBLIC_RESEND
     const fetchOptions: RequestInit = {
       method: "POST",
       headers: {
-        "Content-Type": "aplication/json"
+        "Content-Type": "aplication/json",
+        "Access-Control-Allow-Origin" : "*",
       },
       body: JSONdata
     }
