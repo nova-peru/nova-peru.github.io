@@ -26,6 +26,7 @@ const Contact = () => {
 
       const errorMsg = 'Error al enviar mensaje ❌';
 
+
       try {
         const response = await fetch(endpoint, {
           method: 'POST',
@@ -93,7 +94,9 @@ const Contact = () => {
                         type="email"
                         required
                         placeholder="Ingresa tu email"
+
                         className="w-full rounded-md border border-transparent px-6 py-3 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+
                       />
                     </div>
                   </div>
@@ -110,7 +113,9 @@ const Contact = () => {
                         rows={5}
                         required
                         placeholder="Ingresa tu mensaje"
+
                         className="w-full resize-none rounded-md border border-transparent px-6 py-3 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+
                       ></textarea>
                     </div>
                   </div>
