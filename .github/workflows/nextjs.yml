@@ -25,7 +25,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  NEXT_PUBLIC_RESEND: ${{secrets.NEXT_PUBLIC_RESEND}
+  NEXT_PUBLIC_RESEND: ${{secrets.NEXT_PUBLIC_RESEND}}
 
 jobs:
   # Build job
