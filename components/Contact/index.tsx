@@ -1,10 +1,12 @@
 'use client';
 
 import { useCallback, useState } from 'react';
-import NewsLatterBox from './NewsLatterBox';
 import { ContactForm } from './types';
 import { toast } from 'react-toastify';
 import HttpStatusCode from '@/common/http/statusCode';
+import { fetchResend } from '@/services/resend';
+import { StatusMsgToast } from './statusMsg';
+
 
 type FormStatus = 'loading' | 'success' | 'error' | 'idle';
 
@@ -21,26 +23,24 @@ const Contact = () => {
         name: formData.get('name').toString(),
         message: formData.get('message').toString(),
       };
-      const JSONdata = JSON.stringify(formValues);
-      const endpoint = process.env.NEXT_PUBLIC_RESEND;
-
-      const errorMsg = 'Error al enviar mensaje ❌';
 
       try {
-        const response = await fetch(endpoint, {
-          method: 'POST',
-          body: JSONdata,
-        });
+        const response = await fetchResend(formValues);
+
         if (response.status === HttpStatusCode.OK) {
           setStatus('success');
-          toast.success('Mensaje enviado ✔');
+
+          toast.success(StatusMsgToast.SUCCESS);
+
           return;
         }
         setStatus('error');
-        toast.error(errorMsg);
+
+        toast.error(StatusMsgToast.ERROR);
       } catch (error) {
         setStatus('error');
-        toast.error(errorMsg);
+
+        toast.error(StatusMsgToast.ERROR);
       }
     },
     [],
