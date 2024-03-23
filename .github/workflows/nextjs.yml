@@ -73,7 +73,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-        name: Setup environment variables
+      - name: Setup environment variables
         run: |
         touch .env.local
         echo NEXT_PUBLIC_RESEND=${{ secrets.NEXT_PUBLIC_RESEND }} >> env.local
