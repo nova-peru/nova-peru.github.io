@@ -75,8 +75,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Setup environment variables
         run: |
-        touch .env.local
-        echo NEXT_PUBLIC_RESEND=${{ secrets.NEXT_PUBLIC_RESEND }} >> env.local
+          touch .env.local
+          echo NEXT_PUBLIC_RESEND=${{ secrets.NEXT_PUBLIC_RESEND }} >> env.local
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
