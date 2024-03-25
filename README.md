@@ -1,5 +1,7 @@
 # Novaworks Website
 
+Static site builded on Next.js
+
 Install node modules
 
 ```bash
