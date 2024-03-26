@@ -1,5 +1,6 @@
 'use client'
 
+import {useMemo} from 'react'
 import SectionTitle from "../Common/SectionTitle";
 import VideoItem from "./VideoItem";
 import { videos } from './videos';
@@ -17,7 +18,10 @@ const Video = () => {
           mb="80px"
         />
         <div className="-mx-4 flex flex-row space-x-12 justify-center">
-          {videos.map(video => <VideoItem key={video.id} id={video.id} image={video.image}></VideoItem>)}
+          {useMemo(() => 
+          videos.map(video => 
+          <VideoItem key={video.id} id={video.id} image={video.image}></VideoItem>),
+          [])}
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 z-[-1]">
