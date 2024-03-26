@@ -10,10 +10,10 @@ export const videos : Video[] = [
   },
   {
     id: 'P7pmkgtqhHg',
-    image: 'images/video/video.jpg'
+    image: 'images/video/bot-2.jpg'
   },
   {
     id: 'VGH9NL7pDOQ',
-    image: 'images/video/video.jpg'
+    image: 'images/video/bot-3.jpg'
   }
 ]
