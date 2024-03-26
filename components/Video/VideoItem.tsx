@@ -2,7 +2,12 @@ import { useState } from "react";
 import ModalVideo from "react-modal-video";
 import Image from 'next/image'
 
-const VideoItem = ({ id, image }) => {
+type VideoItemProps = {
+  id:string,
+  image:string
+}
+
+const VideoItem = ({ id, image }:VideoItemProps) => {
   const [isOpen, setOpen] = useState(false);
 
   return (

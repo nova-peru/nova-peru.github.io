@@ -17,9 +17,7 @@ const Video = () => {
           mb="80px"
         />
         <div className="-mx-4 flex flex-row space-x-12 justify-center">
-          {videos.map(video => {
-            return <VideoItem key={video.id} id={video.id} image={video.image}></VideoItem>
-          })}
+          {videos.map(video => <VideoItem key={video.id} id={video.id} image={video.image}></VideoItem>)}
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 z-[-1]">
