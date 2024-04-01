@@ -1,14 +1,14 @@
-import { useState } from "react";
 import ModalVideo from "react-modal-video";
 import Image from 'next/image'
+import { useAppContext } from "@/providers";
 
 type VideoItemProps = {
   id: string,
-  image: string
+  image: string,
 }
 
 const VideoItem = ({ id, image }: VideoItemProps) => {
-  const [isOpen, setOpen] = useState(false);
+  const { openModal } = useAppContext()
 
   return (
     <div className="w-48 h-full">
@@ -17,7 +17,7 @@ const VideoItem = ({ id, image }: VideoItemProps) => {
           <Image data-cy="video-image" src={image} alt="video image" fill />
           <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
             <button
-              onClick={() => setOpen(true)}
+              onClick={() => openModal(id)}
               className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
             >
               <svg width="16" height="18" viewBox="0 0 16 18" className="fill-current">
@@ -27,14 +27,6 @@ const VideoItem = ({ id, image }: VideoItemProps) => {
           </div>
         </div>
       </div>
-      <ModalVideo
-        channel="youtube"
-        autoplay={true}
-        start={true}
-        isOpen={isOpen}
-        videoId={id}
-        onClose={() => setOpen(false)}
-      />
     </div>
   );
 };
