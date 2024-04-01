@@ -3,18 +3,18 @@ import ModalVideo from "react-modal-video";
 import Image from 'next/image'
 
 type VideoItemProps = {
-  id:string,
-  image:string
+  id: string,
+  image: string
 }
 
-const VideoItem = ({ id, image }:VideoItemProps) => {
+const VideoItem = ({ id, image }: VideoItemProps) => {
   const [isOpen, setOpen] = useState(false);
 
   return (
     <div className="w-48 h-full">
       <div className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md" data-wow-delay=".15s">
         <div className="relative aspect-[9/20] items-center justify-center">
-          <Image data-cy="video-image" src={image} alt="video image" layout="fill" objectFit="contain" />
+          <Image data-cy="video-image" src={image} alt="video image" fill />
           <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
             <button
               onClick={() => setOpen(true)}
