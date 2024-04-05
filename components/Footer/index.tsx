@@ -31,13 +31,8 @@ const Footer = () => {
                 </Link>
                 <span>
                   <p className="mb-3 text-base font-medium leading-relaxed text-body-color">
-                    Jr. Junín Nro. 348
-                  </p>
-                  <p className="mb-3 text-base font-medium leading-relaxed text-body-color">
-                    Trujillo
-                  </p>
-                  <p className="mb-7 text-base font-medium leading-relaxed text-body-color">
-                    Perú
+                    © 2024 Novaworks
+                    <br />Todos los derechos reservados
                   </p>
                 </span>
                 {/* <div className="flex items-center">
@@ -145,6 +140,17 @@ const Footer = () => {
                   Contáctanos
                 </h2>
                 <ul>
+                  <li>
+                    <p className="mb-3 text-base font-medium leading-relaxed text-body-color">
+                      Calle Martir Olaya 129
+                      <br />
+                      Oficina Lima Coworking
+                      <br />
+                      Miraflores, Lima
+                      <br />
+                      Perú
+                    </p>
+                  </li>
                   <li>
                     <a
                       href="/"
