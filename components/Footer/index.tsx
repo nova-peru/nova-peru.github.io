@@ -151,7 +151,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      +51 918801827{" "}
+                      +51 933818394{" "}
                     </a>
                   </li>
                   <li>
