@@ -1,33 +1,33 @@
-import { Testimonial } from "@/types/testimonial";
-import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "./SingleTestimonial";
+import { Testimonial } from '@/types/testimonial';
+import SectionTitle from '../Common/SectionTitle';
+import SingleTestimonial from './SingleTestimonial';
 
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: 'Marisa',
+    designation: 'Fundadora de @GibeldiShoes',
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "images/testimonials/auth-01.png",
+      'Me ayuda mucho contestando mensajes que yo no jamás tendría el tiempo para contestar y con una atención increíble."',
+    image: 'images/testimonials/marisa.png',
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: 'Enrique',
+    designation: 'Founder @EnriqueSoftware',
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "images/testimonials/auth-02.png",
+      'Puede dar información sobre mis servicios y cursos, y lo mejor es que trabaja las 24 horas del día cuando uno duerme."',
+    image: 'images/testimonials/kike.png',
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: 'Gabriela',
+    designation: 'Fundadora de @Hideki.HomeCenter',
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "images/testimonials/auth-03.png",
+      'Atiende a todos mis clientes de whastapp, me ha ahorrado muchísimo tiempo que lo utilizo para crecer mi negocio."',
+    image: 'images/testimonials/hideki.png',
     star: 5,
   },
 ];
@@ -37,8 +37,8 @@ const Testimonials = () => {
     <section className="relative z-10 bg-primary/[.03] py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Clientes satisfechos"
+          paragraph="Muchos de nuestros clientes ya están incrementando sus ventas gracias a nuestros Chatbots."
           center
         />
 
@@ -48,7 +48,7 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
-      <div className="absolute top-5 right-0 z-[-1]">
+      <div className="absolute right-0 top-5 z-[-1]">
         <svg
           width="238"
           height="531"
@@ -102,7 +102,7 @@ const Testimonials = () => {
           </defs>
         </svg>
       </div>
-      <div className="absolute left-0 bottom-5 z-[-1]">
+      <div className="absolute bottom-5 left-0 z-[-1]">
         <svg
           width="279"
           height="106"
