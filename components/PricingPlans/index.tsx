@@ -73,6 +73,20 @@ const PricingPlans = () => {
           </PricingBox>
         ))}
       </div>
+
+      <div className="mt-8 w-full">
+        <div
+          className="wow fadeInUp relative z-10 rounded-md bg-white px-8 py-10 shadow-signUp dark:bg-[#1D2144]"
+          data-wow-delay=".1s"
+        >
+          <h3 className="mb-2 font-bold">*Diseño e Implementación</h3>
+          <p>
+            El diseño e Implementación de un Chatbot tiene un costo
+            independiente del plan que se elija y está sujeto a los
+            requerimientos que este tenga.
+          </p>
+        </div>
+      </div>
     </>
   );
 };

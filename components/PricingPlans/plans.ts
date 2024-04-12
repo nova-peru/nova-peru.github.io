@@ -18,7 +18,7 @@ const plans: Plan[] = [
     anualPrice: '89',
     features: [
       {
-        label: 'Diseño e Implementación (a tratar)',
+        label: 'Diseño e Implementación*',
         active: true,
       },
       {
@@ -37,10 +37,6 @@ const plans: Plan[] = [
         label: 'Soporte Técnico',
         active: true,
       },
-      {
-        label: 'Inteligencia Artifical (a tratar)',
-        active: true,
-      },
     ],
   },
   {
@@ -51,7 +47,7 @@ const plans: Plan[] = [
     anualPrice: '479',
     features: [
       {
-        label: 'Diseño e Implementación (a tratar)',
+        label: 'Diseño e Implementación*',
         active: true,
       },
       {
@@ -70,10 +66,6 @@ const plans: Plan[] = [
         label: 'Soporte Técnico',
         active: true,
       },
-      {
-        label: 'Inteligencia Artifical (a tratar)',
-        active: true,
-      },
     ],
   },
   {
@@ -83,7 +75,7 @@ const plans: Plan[] = [
     anualPrice: '950',
     features: [
       {
-        label: 'Diseño e Implementación (a tratar)',
+        label: 'Diseño e Implementación*',
         active: true,
       },
       {
@@ -100,10 +92,6 @@ const plans: Plan[] = [
       },
       {
         label: 'Soporte Técnico',
-        active: true,
-      },
-      {
-        label: 'Inteligencia Artifical (a tratar)',
         active: true,
       },
     ],
@@ -117,7 +105,7 @@ const plans: Plan[] = [
     anualPrice: '1800',
     features: [
       {
-        label: 'Diseño e Implementación (a tratar)',
+        label: 'Diseño e Implementación*',
         active: true,
       },
       {
@@ -136,10 +124,6 @@ const plans: Plan[] = [
         label: 'Soporte Técnico',
         active: true,
       },
-      {
-        label: 'Inteligencia Artifical (a tratar)',
-        active: true,
-      },
     ],
   },
   {
@@ -149,7 +133,7 @@ const plans: Plan[] = [
     customPrice: 'Conversemos',
     features: [
       {
-        label: 'Diseño e Implementación (a tratar)',
+        label: 'Diseño e Implementación*',
         active: true,
       },
       {
@@ -166,10 +150,6 @@ const plans: Plan[] = [
       },
       {
         label: 'Soporte Técnico',
-        active: true,
-      },
-      {
-        label: 'Inteligencia Artifical (a tratar)',
         active: true,
       },
     ],
